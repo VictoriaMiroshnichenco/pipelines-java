@@ -5,7 +5,42 @@
 
 trigger:
 - main
-
+parameters:
+  - name: branchName
+    default: "7.3"
+    displayName: "Branch to Checkout (RIM)"
+    values:
+      - "7.3"
+      - "7.3-finely-blended"
+      - "7.3-gunbros"
+      - "7.3-AllRight"
+  - name: buildDB
+    default: "Yes"
+    displayName: "Build Database?"
+    values:
+      - "Yes"
+      - "No"
+  - name: instanceDB
+    default: "RIM-DEV-CENTRAL"
+    displayName: "Instance Database"
+    values:
+      - "RIM-DEV-CENTRAL"
+      - "RIM-DEV-FB"
+      - "RIM-DEV-GB"
+      - "RIM-DEV-AR"
+  - name: runTests
+    default: "Yes"
+    displayName: "Run Test?"
+    values:
+      - "Yes"
+      - "No"
+  - name: buidType
+    default: "build"
+    displayName: "Build type"
+    values:
+      - "build"
+      - "rc"
+      - "release"
 pool:
   vmImage: ubuntu-latest
 
