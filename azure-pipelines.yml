@@ -42,7 +42,7 @@ parameters:
       - "rc"
       - "release"
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 steps:
 - task: Maven@3
